@@ -17,7 +17,7 @@ const posts = document.getElementById('posts');
 const profilePage = document.getElementById('profile-btn');
 
 
-let isDynamicFooter = false;
+let isDynamicFooter = true;
 
 /* ================= Modal (Dynamic HTML) ================= */
 

@@ -13,8 +13,8 @@ session_start();
 $IDUsername = $_SESSION['IdUsername'];
 
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
-    $title = trim($_POST['post_title']);
-    $text = trim($_POST['post_text']);
+    $title = htmlspecialchars(trim($_POST['post_title']));
+    $text = htmlspecialchars(trim($_POST['post_text']));
     if($title !== "" && strlen($text) <= 200){
         if($text !== "" && strlen($text) <= 1000){
         if (isset($_FILES['post_image']) && $_FILES['post_image']['error'] === 0) {

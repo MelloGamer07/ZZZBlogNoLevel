@@ -29,7 +29,7 @@
 </head>
 <body>
     <video autoplay muted loop id="DynamicWallpaper">
-       <source src="ASSETS/DynamicWallpapers/DynamicWallpaper<?php echo $backgroundPreference?>.mp4" type="video/mp4">
+       <source id="videoSource" src="ASSETS/DynamicWallpapers/DynamicWallpaper<?php echo $backgroundPreference?>.mp4" type="video/mp4">
     </video>
 
     <div id="LoadingScreen"></div>
@@ -108,7 +108,10 @@
             window.location.href = 'https://www.google.com';
         }
 
-        if (window.innerWidth > 768) {
+        const ratio = window.innerWidth / window.innerHeight;
+        const is16by9 = ratio >= 1.7 && ratio <= 1.85; // 16:9 = 1.777...
+
+        if (is16by9) {
             document.getElementById('videoSource').src = 
                 "ASSETS/DynamicWallpapers/DynamicWallpaper<?php echo $backgroundPreference?>.mp4";
             document.getElementById('DynamicWallpaper').load();

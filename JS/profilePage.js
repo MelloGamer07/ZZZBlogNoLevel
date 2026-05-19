@@ -337,7 +337,7 @@ function saveProfile() {
         avatar_id: pendingAvatarIndex
     });
 
-    fetch('PHP/updateProfile.php', {
+    fetch('PHP/UpdateProfile.php', {
         method: 'POST',
         headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
         body: body.toString()

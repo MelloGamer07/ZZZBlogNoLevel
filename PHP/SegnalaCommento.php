@@ -41,11 +41,13 @@ $stmt->close();
 
 session_write_close();
 if ($authorId === $userId) {
-    die("You can't report your own post silly punk! How did you even manage to do that?..");
+    mysqli_close($conn);
+    header("Location: ../home.php#InterKnot/");
 }
 
 if ($alreadyReport) {
-    die("You already reported this post! Don't kill the servers :(");
+    mysqli_close($conn);
+    header("Location: ../home.php#InterKnot/");
 }
 
 $stmt = $conn->prepare("INSERT INTO Segnalazione (Ragione, IdUtente, IdArticolo, IdCommento) VALUES (?, ?, ?, ?)");

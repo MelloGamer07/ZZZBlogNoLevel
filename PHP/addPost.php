@@ -13,7 +13,7 @@
     $hostname = "localhost";
     $username = "root";
     $password = "";
-    $database = "zzz_2";
+    $database = "my_zzzblog";
 
     $conn = mysqli_connect($hostname, $username, $password, $database);
     if (!$conn) {
