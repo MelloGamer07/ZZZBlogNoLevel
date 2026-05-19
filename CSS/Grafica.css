@@ -1,0 +1,552 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'inpin hongmengti';
+    letter-spacing: 1px;
+}
+
+body {
+    background-color: black;
+    overflow: hidden;
+}
+
+@font-face {
+    font-family: 'inpin hongmengti';
+    src: url('../ASSETS/ZZZ.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+/* VIDEO BACKGROUND*/
+.background {
+  position: fixed;
+  z-index: -1;
+  top: 0;
+  left: 0;
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  pointer-events: none;
+  transition: opacity 2s ease;
+}
+
+.blur1, .blur2 {
+  position: absolute;
+  z-index: -5;
+  top: 0;
+  left: 0;
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+  display: none;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  background: repeating-linear-gradient(
+    45deg,
+    #1b1b1b,
+    #1b1b1b 5px,
+    #030404 5px,
+    #030404 10px
+    );
+
+}
+
+.blur1 {
+    cursor: pointer;
+}
+
+.blur2 {
+    opacity: 0.8;
+    display: block;
+    z-index: 1;
+}
+
+.button {
+    position: absolute;
+    left: 50%;
+    bottom: 100px;          
+    transform: translateX(-50%);
+
+    height: 60px;
+    aspect-ratio: 6;
+    background-color: #090909;
+    color: white;
+    font-style: italic;
+    font-size: 30px;
+    border-radius: 80px;
+
+    display: flex;
+    align-items: center;      
+    justify-content: center;  
+
+    padding: 0 25px;
+
+    outline: 2px solid #090909;
+    border: 4px solid #454545;
+    cursor: pointer;
+}
+
+.buttonLogin {
+    margin-top: 10px;
+    position: relative;
+
+    width: 70%;
+    height: 50px;
+    aspect-ratio: 6;
+    background-color: #090909;
+    color: white;
+    font-size: 20px;
+    border-radius: 80px;
+
+    display: flex;
+    align-items: center;      
+    justify-content: center;  
+
+    margin-top: 20px;
+    padding: 10px 25px;
+
+    outline: 2px solid #090909;
+    border: 4px solid #454545;
+    cursor: pointer;
+}
+
+.buttonLogin:active{
+    animation: button-pressedLogin 1s infinite;
+    border: 0;
+    outline: 0;
+    color: white;
+}
+
+.input {
+    margin-top: 10px;
+    position: relative;
+
+    width: 70%;
+    height: 50px;
+    aspect-ratio: 6;
+    background-color: #1c1c1c;
+    color: white;
+    font-size: 20px;
+    border-radius: 80px;
+
+    display: flex;
+    align-items: center;      
+    justify-content: center;  
+
+    padding: 10px 25px;
+
+    outline: 2px solid #090909;
+    border: 4px solid #323232;
+    cursor: pointer;
+}
+
+.input:active{
+    border: 4px solid #e3ff00;
+}
+
+.Reg-Pas {
+    margin-top: 20px;
+    position: relative;
+
+    width: 70%;
+    height: 50px;
+    aspect-ratio: 6;
+    color: white;
+    font-size: 20px;
+
+    display: flex;
+    align-items: center;      
+    justify-content: space-between; 
+    gap: 50px;
+    padding: 10px 25px;
+}
+
+.R, .P ,.L{
+    cursor: pointer;
+    margin: 0; 
+}
+.button:active{
+    animation: button-pressed 1s infinite;
+    border: 0;
+    outline: 0;
+    color: white;
+}
+
+@keyframes button-pressedLogin {
+    0% {
+        transform: scaleY(1);
+        background: linear-gradient(45deg, #e3ff00,#a2ff00, #e3ff00);
+    }
+    50%{
+        transform: scaleY(1.1);
+    }
+    75% {
+        background: linear-gradient(45deg, #a2ff00,#e3ff00, #a2ff00);
+    }
+    100% {
+        transform: scaleY(1);
+        background: linear-gradient(45deg, #e3ff00,#a2ff00, #e3ff00);
+    }
+}
+
+@keyframes button-pressed {
+    0% {
+        transform: translateX(-50%) scaleY(1);
+        background: linear-gradient(45deg, #e3ff00,#a2ff00, #e3ff00);
+    }
+    50%{
+        transform: translateX(-50%) scaleY(1.1);
+    }
+    100%{
+        transform: translateX(-50%) scaleY(1);
+        background: linear-gradient(45deg, #e3ff00,#a2ff00, #e3ff00);
+    }
+}
+
+.login, .register, .forgotPassword {
+    flex-direction: column;                
+
+    position: absolute;
+    left: 50%;
+    top: 225px;          
+    transform: translateX(-50%);
+
+    z-index: 2;
+    display: none;
+    width: 800px;
+    height: 450px;
+    aspect-ratio: 6;
+    background-color: #090909;
+    color: white;
+    font-size: 30px;
+
+    align-items: center;      
+    justify-content: center;  
+
+    opacity: 0;
+    outline: 4px solid #454545;
+    border: 4px solid black;
+    transition: opacity 0.3s ease;
+    border-radius: 25px 0px 25px 25px;
+
+}
+
+.register {
+    opacity: 1;
+    display: block;
+    height: 525px;
+}
+
+.forgotPassword {
+    opacity: 1;
+    display: block;
+    height: 485px;
+}
+
+.header-login{
+    position: relative;   
+    background: linear-gradient(#272727, #090909);
+    width: 100%;
+    height: 100px;
+    border-radius: 25px 0px 0px 0px;
+    display: flex;
+    align-items: center;      
+    justify-content: center;
+    z-index: 1;
+    --dotSize: 0.08rem;
+}
+
+.header-login::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+
+  /* Dotted background */
+  background-image: radial-gradient(
+      circle at center,
+      black var(--dotSize),
+      transparent 0
+    ), radial-gradient(circle at center, black var(--dotSize), transparent 0);
+  background-size: 0.6rem 0.6rem;
+  background-position: 0 0, 0.3rem 0.3rem;
+  mask-image: linear-gradient(rgb(0 0 0), rgb(0 0 0 / 0));
+}
+
+.ImgHeaderBehind {
+    position: absolute;
+    right: 0;
+    margin-right: 30px;
+    width: 90px;
+    height: 60px;
+    cursor: pointer;
+    user-select: none;
+    -webkit-user-drag: none;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.ImgHeaderBehind:active { 
+    animation: footer-button-pressed 1s infinite;
+    filter: invert();
+    border-radius: 40px 12px 50px 40px ;
+    background-color: transparent; 
+}
+
+.ImgHeaderBehind:active #IMG{ display: none; }
+
+@keyframes footer-button-pressed {
+    0% {
+        transform: scaleY(1);
+        background-image: linear-gradient(45deg, #1c00ff,#5d00ff, #1c00ff,#5d00ff, #1c00ff);
+        
+    }
+    75% {
+        transform: scaleY(1.1);
+        background-image: linear-gradient(45deg, #5d00ff,#1c00ff, #5d00ff,#1c00ff, #5d00ff);
+    }
+    100% {
+        transform: scaleY(1);
+        background-image: linear-gradient(45deg, #1c00ff,#5d00ff, #1c00ff,#5d00ff, #1c00ff);
+    }
+}
+
+.body-login{
+    display: flex;
+    flex-direction: column;
+    align-items: center;  
+    justify-content: start;
+
+    margin-top: 2px;
+    position: relative;
+    width: 100%;
+    height: 340px;
+    border-radius: 0 0 25px 25px;
+    padding-top: 10px;
+    background-image: url("../ASSETS/IMG/UI/loginBackground.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.AttentionInputsEmail {
+    position: absolute;
+    left: 50%;
+    top: 110px;
+    transform: translateX(-50%);
+    z-index: 2;
+
+    width: auto;
+    height: auto;
+
+    box-sizing: border-box;
+
+    background-color: #090909;
+    color: white;
+    font-style: italic;
+    font-size: 16px;
+    border-radius: 80px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    padding: 5px 25px;
+    cursor: pointer;
+
+    white-space: nowrap;
+    overflow: hidden;
+    display: none;
+    opacity: 0;
+    transition: opacity 2s ease;
+}
+
+.AttentionInputsEmail p {
+    padding-left: 100%; 
+    animation: slide 8s linear infinite;
+}
+
+.AttentionInputsUsername {
+    position: absolute;
+    left: 50%;
+    top: 144px;
+    transform: translateX(-50%);
+    z-index: 2;
+
+    width: auto;
+    height: auto;
+
+    box-sizing: border-box;
+
+    background-color: #090909;
+    color: white;
+    font-style: italic;
+    font-size: 16px;
+    border-radius: 80px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    padding: 5px 25px;
+    cursor: pointer;
+
+    white-space: nowrap;
+    overflow: hidden;
+    display: none;
+    opacity: 0;
+    transition: opacity 2s ease;
+}
+
+.AttentionInputsUsername p {
+    padding-left: 100%; 
+    animation: slide 8s linear infinite;
+}
+
+@keyframes slide {
+    0% {
+        transform: translateX(30%);
+    }
+    100% {
+        transform: translateX(-250%);
+    }
+}
+
+.AttentionInputsPassword {
+    position: absolute;
+    left: 50%;
+    top: 178px;
+    transform: translateX(-50%);
+
+    width: auto;
+    height: auto;
+
+    box-sizing: border-box;
+
+    background-color: #090909;
+    color: white;
+    font-style: italic;
+    font-size: 15px;
+    border-radius: 80px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    padding: 5px 25px;
+    cursor: pointer;
+
+    white-space: nowrap;
+    display: none;
+    z-index: 2;
+    opacity: 0;
+    transition: opacity 2s ease;
+}
+
+.footer {
+    background-color: #090909;
+    color: #fdfdfd;
+    text-align: center;
+    padding: 15px 15px;
+    position: absolute;
+    z-index: 5;
+    bottom: 0;
+    width: 100%;
+
+    opacity: 0.9;
+}
+
+.footer::before {
+    content: "";
+    position: absolute;
+    top: 3px;      
+    left: 0;
+    width: 100%;
+    height: 5px;
+    background-color: #454545;
+}
+
+.footer h2 {
+    font-size: 18px;
+    margin-bottom: 8px;
+}
+
+.footer a:hover{
+    color: grey;
+    transition: 0.2s;
+    cursor: pointer;
+    text-decoration: underline;
+}
+
+/* HEADER */
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 999;
+    height: 100px;
+
+    background-color: #090909;
+    width: 100%;
+    padding: 0.5rem 1rem;
+    box-sizing: border-box;
+
+    background-image:
+      radial-gradient(circle at center, black 0.08rem, transparent 0),
+      radial-gradient(circle at center, black 0.08rem, transparent 0);
+    background-size: 0.6rem 0.6rem;
+    background-position: 0 0, 0.3rem 0.3rem;
+
+    mask-image: linear-gradient(rgb(0 0 0), rgb(0 0 0));
+    -webkit-user-drag: none;
+
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+
+    opacity: 0.9;
+}
+
+/* BACK BUTTON */
+.back-btn{
+    border: 1px solid transparent;
+    aspect-ratio: 3/2;
+    height: 50px;
+    border-radius:15px 27px 27px 30px;
+    position: absolute;
+    left: 35px;
+}
+
+.back-btn:active{
+    animation: button-pressed 1s infinite;
+    position: absolute;
+    left: 75px;
+}
+
+.back-btn-img{
+    width: 100%;
+    height: 100%;
+    display: block;
+    user-select: none;
+}
+
+.back-btn-img:active{
+    width: 100%;
+    height: 100%;
+    display: none;
+    user-select: none;
+}
+
+header::before {
+    content: "";
+    position: absolute;
+    bottom: 3px;
+    left: 0;
+    width: 100%;
+    height: 5px;
+    background-color: #454545;
+}

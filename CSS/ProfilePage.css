@@ -1,0 +1,1252 @@
+body{
+    margin:0;
+    background-image: url('../ASSETS/IMG/LoadingScreens/0.jpg');
+    background-size: cover;
+    cursor: url("../ASSETS/cursor.cur"),auto;
+}
+
+.back-btn{
+    border: 1px solid transparent;
+    aspect-ratio: 3/2;
+    height: 50px;
+    border-radius:15px 27px 27px 30px;
+    margin-left: 25px;
+}
+
+.back-btn:active{
+    animation: button-pressed 1s infinite;
+    margin-left: 25px;
+}
+
+.back-btn-img{
+    width: 100%;
+    height: 100%;
+    display: block;
+    user-select: none;
+}
+
+.back-btn-img:active{
+    width: 100%;
+    height: 100%;
+    display: none;
+}
+
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 999;
+
+    background-color: rgba(0,0,0,0.65);
+    width: 100%;
+    padding: 15px 10px;
+    box-sizing: border-box;
+
+    background-image:
+      radial-gradient(circle at center, black 0.08rem, transparent 0),
+      radial-gradient(circle at center, black 0.08rem, transparent 0);
+    background-size: 0.6rem 0.6rem;
+    background-position: 0 0, 0.3rem 0.3rem;
+
+    mask-image: linear-gradient(rgb(0 0 0), rgb(0 0 0));
+    -webkit-user-drag: none;
+
+    display: flex;
+    align-items: center;      
+    justify-content: space-between;
+}
+
+body{
+    background-image: url("../ASSETS/IMG/UI/BackgroundProfilePage.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.profile-container{
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 100px;
+
+    height: 750px;
+    width: 1500px;
+    background-color: #090909;
+    color: white;
+    font-style: italic;
+    font-size: 16px;
+    border-radius: 80px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;  
+
+    padding: 0 5px;
+
+    outline: 2px solid #090909;
+    border: 4px solid #222222;
+    font-family: 'InpinHongmengti', sans-serif;
+
+    user-select: none;
+}
+
+.profile-header{
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 5px;
+
+    height: 250px;
+    width: 1490px;
+    background: linear-gradient(#222222,#161616, #161616);
+    color: white;
+    font-style: italic;
+    font-size: 16px;
+    border-radius: 70px;
+
+    display: flex;
+    align-items: center;      
+    justify-content: space-between;
+    
+    outline: 2px solid #090909;
+    border: 4px solid #222222;
+    font-family: 'InpinHongmengti', sans-serif;
+
+    user-select: none;
+}
+
+.UID{
+    width: 250px;
+    max-width: 100%;
+    height: 50px;
+    background: #000;
+    border-radius: 30px;
+    margin-left: 25px;
+    color: white;
+    font-family: 'inpin hongmengti', italic;
+    padding: 4px;
+    box-sizing: border-box;
+
+    border: 5px solid #222222;
+    
+    display: flex;
+    align-items: center;      
+    justify-content: center;  
+
+    font-size: 20px;
+
+    transform: translate(0,-125%);
+}
+
+.edit-info-btn, .eliminate-account-btn{
+
+    margin-left: auto;
+
+    height: 40px;
+    width: 200px;
+    background: #000;
+    color: white;
+    font-style: italic;
+    font-size: 16px;
+    border-radius: 70px;
+    margin-right: 25px;
+
+    display: flex;
+    align-items: center;      
+    justify-content: center;  
+
+    outline: 4px solid #090909;
+    border: 4px solid #222222;
+    font-family: 'inpin hongmengti', italic;
+    font-size: 20px;
+
+    transform: translate(0,-125%);
+
+    user-select: none;
+
+    transition: 0.2s;
+}
+
+ .eliminate-account-btn{
+    width: 250px;
+ }
+
+.edit-info-btn:hover {
+    border-color: #a2ff00;
+    color: #a2ff00;
+}
+
+.eliminate-account-btn:hover {
+    border-color: #ff3c00;
+    color: #ff3c00;
+}
+
+.profile-body{
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: -125px;
+
+    height: 598px;
+    width: 1490px;
+    background: linear-gradient(#222222,#141416, #000, #000,#141414, #222222);
+    color: white;
+    font-style: italic;
+    font-size: 16px;
+    border-radius: 70px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;  
+
+    outline: 5px solid #090909;
+    border: 5px solid #222222;
+    font-family: 'InpinHongmengti', sans-serif;
+
+    user-select: none;
+}
+
+.profile-main{
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 5px;
+
+    height: 284px;
+    width: 1455px;
+    background:#202020;
+    color: white;
+    font-style: italic;
+    font-size: 16px;
+    border-radius: 60px 60px 40px 40px;
+
+    outline: 2px solid #090909;
+    border: 5px solid #222222;
+    font-family: 'Inpin Hongmengti', sans-serif;
+
+    user-select: none;
+}
+
+.profile-avatar{
+    width: 150px;
+    height: 150px;
+    outline: 2px solid #090909;
+    border: 5px solid #222222;
+    background:#000;
+
+    border-radius: 50%;
+    margin-top: 15px;
+    margin-left: 15px;
+}
+
+.pfp{
+    width: 100%;
+    height: 100%;
+}
+
+.profile-username{
+    font-family: 'Inpin Hongmengti', sans-serif;
+
+    font-size: 24px;
+
+    margin-top: -100px;
+    margin-left: 200px;
+}
+
+.profile-desc{
+    font-family: 'Inpin Hongmengti', sans-serif;
+
+    font-size: 20px;
+
+    margin-top: 75px;
+    margin-left: 25px;
+}
+
+.profile-user-posts{
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 10px;
+
+    height: 284px;
+    width: 1435px;
+    background:transparent;
+    color: white;
+    font-style: italic;
+    font-size: 16px;
+    border-radius: 40px 40px 60px 60px ;
+
+    display: flex;
+    flex-direction: row;
+    align-items: center;  
+
+    padding-left: 10px;
+    padding-right: 10px;
+
+    display: grid;
+    grid-template-columns: repeat(7, 200px);
+    gap: 35px;
+    font-family: 'Inpin Hongmengti', sans-serif;
+
+    user-select: none;
+}
+
+.post-container {
+    width: 200px;
+    height: 270px;
+    margin-left: 20px;
+
+    background-color: #000;
+
+    outline: 2px solid #090909;
+    border: 5px solid #222222;
+
+    overflow: hidden;
+    border-radius: 20px;
+
+    cursor: pointer;
+}
+
+.img{
+    width: auto;
+    height: 100%;
+    object-fit: cover;
+}
+
+.post-title{
+    font-size: 18px;
+
+    margin-top: -35px;
+
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    max-width: 250px;
+}
+
+@keyframes button-pressed {
+    0% {
+        transform: scale(100%,100%);
+        background: linear-gradient(45deg, #e3ff00,#a2ff00, #e3ff00);
+    }
+    50%{
+        transform: scale(110%,110%);
+    }
+    75% {
+        background: linear-gradient(45deg, #a2ff00,#e3ff00, #a2ff00);
+    }
+    100% {
+        transform: scale(100%,100%);
+        background: linear-gradient(45deg, #e3ff00,#a2ff00, #e3ff00);
+    }
+}
+
+.search-btn{
+    position: absolute;
+    left: auto;
+    right: 375px;
+
+    height: 50px;
+    width: 150px;
+    background-color: #090909;
+    color: white;
+    font-style: italic;
+    font-size: 18px;
+    border-radius: 80px;
+
+    display: flex;
+    align-items: center;      
+    justify-content: center;  
+
+    padding: 0 15px;
+
+    outline: 2px solid #090909;
+    border: 4px solid #454545;
+    cursor: pointer;
+    font-family: 'Inpin Hongmengti', sans-serif;
+
+    user-select: none;
+}
+
+.search-btn:active{
+    animation: button-pressed 1s infinite;
+    color: #000;
+}
+
+.friend-list-btn{
+    position: absolute;
+    left: auto;
+    right: 175px;
+
+    height: 50px;
+    width: 150px;
+    background-color: #090909;
+    color: white;
+    font-style: italic;
+    font-size: 18px;
+    border-radius: 80px;
+
+    display: flex;
+    align-items: center;      
+    justify-content: center;  
+
+    padding: 0 15px;
+
+    outline: 2px solid #090909;
+    border: 4px solid #454545;
+    cursor: pointer;
+    font-family: 'Inpin Hongmengti', sans-serif;
+
+    user-select: none;
+}
+
+.friend-list-btn:active{
+    animation: button-pressed 1s infinite;
+    color: #000;
+}
+
+/* Follow Button */
+.follow-btn {
+    height: 40px;
+    width: 200px;
+    background: #000;
+    color: white;
+    font-style: italic;
+    font-size: 20px;
+    border-radius: 70px;
+    margin-right: 25px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    outline: 4px solid #090909;
+    border: 4px solid #222222;
+    font-family: 'inpin hongmengti', italic;
+
+    transform: translate(0,-125%);
+    cursor: pointer;
+    user-select: none;
+    transition: border-color 0.2s, color 0.2s;
+}
+
+.follow-btn:hover {
+    border-color: #a2ff00;
+    color: #a2ff00;
+}
+
+.follow-btn.following {
+    border-color: #555;
+    color: #888;
+}
+
+.follow-btn.following:hover {
+    border-color: #ff4444;
+    color: #ff4444;
+}
+
+/* ============================================================
+   SHARED MODAL OVERLAY
+============================================================ */
+.modal-overlay {
+    display: none;
+    position: fixed;
+    inset: 0;
+    z-index: 1000;
+    background: rgba(0, 0, 0, 0.75);
+    backdrop-filter: blur(4px);
+    align-items: flex-start;
+    justify-content: center;
+    padding-top: 120px;
+}
+
+.modal-overlay.active {
+    display: flex;
+}
+
+/* Search modal */
+.search-modal {
+    width: 500px;
+    background: #0d0d0d;
+    border-radius: 24px;
+    border: 4px solid #222;
+    outline: 2px solid #090909;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+}
+
+.search-input {
+    width: 100%;
+    padding: 18px 24px;
+    background: #111;
+    border: none;
+    border-bottom: 3px solid #222;
+    color: white;
+    font-size: 20px;
+    font-family: 'Inpin Hongmengti', sans-serif;
+    font-style: italic;
+    outline: none;
+    box-sizing: border-box;
+}
+
+.search-input::placeholder {
+    color: #444;
+}
+
+.search-results {
+    max-height: 360px;
+    overflow-y: auto;
+    padding: 8px 0;
+}
+
+.search-placeholder {
+    color: #444;
+    text-align: center;
+    font-family: 'Inpin Hongmengti', sans-serif;
+    font-style: italic;
+    padding: 20px;
+    margin: 0;
+}
+
+.search-result-item {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    padding: 12px 24px;
+    cursor: pointer;
+    transition: background 0.15s;
+    font-family: 'Inpin Hongmengti', sans-serif;
+    font-style: italic;
+    color: white;
+    font-size: 18px;
+}
+
+.search-result-item:hover {
+    background: #1a1a1a;
+    border-left: 3px solid #a2ff00;
+}
+
+.search-result-item img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    border: 2px solid #333;
+    object-fit: cover;
+}
+
+/* ================= Profile XP / Level Bar ================= */
+
+.profile-level-container {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    width: 350px;
+    margin-left: 200px;
+}
+
+.profile-lvlBar-container {
+    flex: 1;
+    background-color: black;
+    height: 12px;
+    border-radius: 10px;
+    overflow: hidden;
+    border: solid #000000;
+    position: relative;
+}
+
+.profile-lvlBar-completition {
+    background: linear-gradient(135deg, #2aa8ff, #3ec1ff);
+    height: 100%;
+    width: 0%;
+    border-radius: 10px;
+    transition: width 1s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.profile-level-badge {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex-shrink: 0;
+    font-family: 'InpinHongmengti', sans-serif;
+}
+
+.profile-user-lvl {
+    font-size: 1.4rem;
+    margin: 0;
+    text-shadow: 3px 3px 2px black;
+    color: white;
+}
+
+.profile-level-tag {
+    font-size: 0.75rem;
+    margin: 0;
+    text-shadow: 3px 3px 2px black;
+    opacity: 0.8;
+    color: white;
+    font-family: 'InpinHongmengti', sans-serif;
+}
+
+/* ============================================================
+   EDIT INFO MODAL
+============================================================ */
+.edit-modal-overlay {
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.80);
+    backdrop-filter: blur(6px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.35s ease;
+}
+.edit-modal-overlay.active {
+    opacity: 1;
+    pointer-events: all;
+}
+
+.edit-modal {
+    background: #0d0d0d;
+    border: 4px solid #222;
+    border-radius: 30px;
+    padding: 36px 32px 28px;
+    width: min(480px, 92vw);
+    display: flex;
+    flex-direction: column;
+    gap: 22px;
+    animation: terms-pop-in 0.4s ease forwards;
+    font-family: 'inpin hongmengti', italic;
+}
+
+.edit-modal-title {
+    font-size: 1.4rem;
+    font-style: italic;
+    font-weight: 700;
+    color: #fff;
+    margin: 0;
+    border-bottom: 3px solid #222;
+    padding-bottom: 16px;
+}
+
+/* Avatar row */
+.edit-avatar-row {
+    display: flex;
+    align-items: center;
+    gap: 18px;
+}
+.edit-avatar-preview {
+    width: 72px;
+    height: 72px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 4px solid #222;
+    flex-shrink: 0;
+    transition: border-color 0.2s;
+}
+.edit-avatar-preview:hover {
+    border-color: #a2ff00;
+}
+.edit-change-avatar-btn {
+    height: 44px;
+    padding: 0 22px;
+    border-radius: 50px;
+    background: #000;
+    border: 4px solid #333;
+    color: #888;
+    font-family: 'inpin hongmengti', italic;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: border-color 0.2s, color 0.2s;
+    white-space: nowrap;
+}
+.edit-change-avatar-btn:hover {
+    border-color: #fff;
+    color: #fff;
+}
+
+/* Text fields */
+.edit-field {
+    display: flex;
+    flex-direction: column;
+    gap: 7px;
+}
+.edit-field label {
+    font-size: 0.78rem;
+    font-weight: 600;
+    color: #555;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    font-style: italic;
+}
+.edit-field input,
+.edit-field textarea {
+    background: #161616;
+    border: 3px solid #222;
+    border-radius: 12px;
+    color: #fff;
+    font-size: 1rem;
+    padding: 10px 14px;
+    outline: none;
+    transition: border-color 0.2s;
+    font-family: 'inpin hongmengti', italic;
+    resize: none;
+}
+.edit-field input:focus,
+.edit-field textarea:focus {
+    border-color: #a2ff00;
+}
+.edit-field textarea {
+    height: 90px;
+}
+.edit-char-count {
+    font-size: 0.72rem;
+    color: #444;
+    text-align: right;
+    margin-top: -4px;
+    font-style: italic;
+}
+.edit-char-count.warn { color: #e3ff00; }
+.edit-char-count.over { color: #ff4444; }
+
+/* Action buttons */
+.edit-modal-actions {
+    display: flex;
+    gap: 16px;
+    justify-content: flex-end;
+    border-top: 3px solid #222;
+    padding-top: 20px;
+    margin-top: 4px;
+}
+.edit-cancel-btn {
+    height: 44px;
+    width: 140px;
+    border-radius: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #000;
+    border: 4px solid #333;
+    color: #555;
+    font-family: 'inpin hongmengti', italic;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: border-color 0.2s, color 0.2s;
+}
+.edit-cancel-btn:hover {
+    border-color: #ff4444;
+    color: #ff4444;
+}
+.edit-save-btn {
+    height: 44px;
+    width: 140px;
+    border-radius: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #000;
+    border: 4px solid #a2ff00;
+    color: #a2ff00;
+    font-family: 'inpin hongmengti', italic;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background 0.2s, color 0.2s;
+}
+.edit-save-btn:hover {
+    background: #a2ff00;
+    color: #000;
+}
+.edit-save-btn:active {
+    animation: CDW-button-pressed 1s infinite;
+}
+.edit-save-btn:disabled {
+    opacity: 0.35;
+    pointer-events: none;
+}
+
+.edit-feedback {
+    font-size: 0.85rem;
+    font-style: italic;
+    text-align: center;
+    min-height: 18px;
+    color: #a2ff00;
+}
+.edit-feedback.error { color: #ff4444; }
+
+/* ============================================================
+   AVATAR PICKER MODAL
+============================================================ */
+.avatar-picker-overlay {
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.85);
+    backdrop-filter: blur(6px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1100;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.3s ease;
+}
+.avatar-picker-overlay.active {
+    opacity: 1;
+    pointer-events: all;
+}
+
+.avatar-picker-modal {
+    background: #0d0d0d;
+    border: 4px solid #222;
+    border-radius: 30px;
+    padding: 28px 24px 24px;
+    width: min(560px, 94vw);
+    max-height: 80vh;
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+    animation: terms-pop-in 0.4s ease forwards;
+    font-family: 'inpin hongmengti', italic;
+}
+
+.avatar-picker-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 3px solid #222;
+    padding-bottom: 16px;
+}
+.avatar-picker-title {
+    font-size: 1.1rem;
+    font-style: italic;
+    font-weight: 700;
+    color: #fff;
+    margin: 0;
+}
+.avatar-picker-back {
+    height: 38px;
+    padding: 0 18px;
+    border-radius: 50px;
+    background: #000;
+    border: 4px solid #333;
+    color: #888;
+    font-family: 'inpin hongmengti', italic;
+    font-size: 0.9rem;
+    cursor: pointer;
+    transition: border-color 0.2s, color 0.2s;
+}
+.avatar-picker-back:hover {
+    border-color: #fff;
+    color: #fff;
+}
+
+.avatar-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(74px, 1fr));
+    gap: 14px;
+    overflow-y: auto;
+    padding-right: 4px;
+    scrollbar-width: thin;
+    scrollbar-color: #333 transparent;
+}
+.avatar-grid::-webkit-scrollbar       { width: 5px; }
+.avatar-grid::-webkit-scrollbar-track { background: transparent; }
+.avatar-grid::-webkit-scrollbar-thumb { background: #333; border-radius: 10px; }
+
+.avatar-grid-item {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+.avatar-grid-item .avatar-circle {
+    width: 64px;
+    height: 64px;
+    border-radius: 50%;
+    overflow: hidden;
+    border: 4px solid #222;
+    background: #161616;
+    transition: border-color 0.18s, transform 0.18s;
+}
+.avatar-grid-item .avatar-circle img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+.avatar-grid-item:hover .avatar-circle {
+    border-color: #fff;
+    transform: scale(1.08);
+}
+.avatar-grid-item.selected .avatar-circle {
+    border-color: #a2ff00;
+    transform: scale(1.1);
+    box-shadow: 0 0 0 2px #000, 0 0 0 4px #a2ff00;
+}
+
+/* ============================================================
+   LOGOUT BUTTON
+============================================================ */
+.logout-btn {
+    position: absolute;
+    left: auto;
+    right: 25px;
+
+    height: 50px;
+    width: 100px;
+    background-color: #090909;
+    color: #ff4444;
+    font-style: italic;
+    font-size: 18px;
+    border-radius: 80px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    padding: 0 15px;
+
+    outline: 2px solid #090909;
+    border: 4px solid #7a0000;
+    cursor: pointer;
+    font-family: 'Inpin Hongmengti', sans-serif;
+    user-select: none;
+    transition: border-color 0.2s, color 0.2s;
+}
+
+.logout-btn:hover {
+    border-color: #ff4444;
+    color: #fff;
+}
+
+.logout-btn:active {
+    animation: button-pressed 1s infinite;
+    color: #000;
+}
+
+/* ============================================================
+   LOGOUT CONFIRMATION MODAL
+============================================================ */
+.logout-modal-overlay {
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.80);
+    backdrop-filter: blur(6px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.35s ease;
+}
+.logout-modal-overlay.active {
+    opacity: 1;
+    pointer-events: all;
+}
+
+.logout-modal {
+    background: #0d0d0d;
+    border: 4px solid #222;
+    border-radius: 30px;
+    padding: 36px 32px 28px;
+    width: min(400px, 92vw);
+    display: flex;
+    flex-direction: column;
+    gap: 22px;
+    animation: terms-pop-in 0.4s ease forwards;
+    font-family: 'inpin hongmengti', italic;
+}
+
+.logout-modal-title {
+    font-size: 1.4rem;
+    font-style: italic;
+    font-weight: 700;
+    color: #fff;
+    margin: 0;
+    border-bottom: 3px solid #222;
+    padding-bottom: 16px;
+}
+
+.logout-modal-body {
+    font-size: 1rem;
+    font-style: italic;
+    color: #555;
+    margin: 0;
+}
+
+.logout-modal-actions {
+    display: flex;
+    gap: 16px;
+    justify-content: flex-end;
+    border-top: 3px solid #222;
+    padding-top: 20px;
+    margin-top: 4px;
+}
+
+.logout-cancel-btn {
+    height: 44px;
+    width: 140px;
+    border-radius: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #000;
+    border: 4px solid #333;
+    color: #555;
+    font-family: 'inpin hongmengti', italic;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: border-color 0.2s, color 0.2s;
+}
+.logout-cancel-btn:hover {
+    border-color: #a2ff00;
+    color: #a2ff00;
+}
+
+.logout-confirm-btn {
+    height: 44px;
+    width: 140px;
+    border-radius: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #000;
+    border: 4px solid #7a0000;
+    color: #ff4444;
+    font-family: 'inpin hongmengti', italic;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background 0.2s, color 0.2s;
+}
+.logout-confirm-btn:hover {
+    background: #ff4444;
+    color: #000;
+}
+/* ============================================================
+   FRIEND LIST MODAL
+============================================================ */
+.friend-list-modal {
+    width: 500px;
+    background: #0d0d0d;
+    border-radius: 24px;
+    border: 4px solid #222;
+    outline: 2px solid #090909;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    max-height: 80vh;
+}
+
+.friend-list-modal-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 18px 24px 14px;
+    border-bottom: 3px solid #1a1a1a;
+    flex-shrink: 0;
+}
+
+.friend-list-modal-title {
+    font-size: 1.25rem;
+    font-style: italic;
+    font-weight: 700;
+    color: #fff;
+    margin: 0;
+    font-family: 'Inpin Hongmengti', sans-serif;
+}
+
+.friend-list-modal-count {
+    font-size: 0.85rem;
+    font-style: italic;
+    color: #555;
+    font-family: 'Inpin Hongmengti', sans-serif;
+}
+
+.friend-list-results {
+    overflow-y: auto;
+    flex: 1;
+    padding: 8px 0;
+    scrollbar-width: thin;
+    scrollbar-color: #333 transparent;
+    min-height: 80px;
+}
+.friend-list-results::-webkit-scrollbar       { width: 5px; }
+.friend-list-results::-webkit-scrollbar-track { background: transparent; }
+.friend-list-results::-webkit-scrollbar-thumb { background: #333; border-radius: 10px; }
+
+/* ── Pagination ── */
+.friend-list-pagination {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 6px;
+    padding: 14px 16px;
+    border-top: 3px solid #1a1a1a;
+    flex-wrap: wrap;
+    flex-shrink: 0;
+}
+
+.fl-page-btn {
+    min-width: 38px;
+    height: 38px;
+    padding: 0 10px;
+    border-radius: 50px;
+    background: #000;
+    border: 3px solid #2a2a2a;
+    color: #777;
+    font-family: 'Inpin Hongmengti', sans-serif;
+    font-style: italic;
+    font-size: 0.95rem;
+    cursor: pointer;
+    transition: border-color 0.18s, color 0.18s, background 0.18s;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+}
+.fl-page-btn:hover:not(.disabled):not(.active) {
+    border-color: #a2ff00;
+    color: #a2ff00;
+}
+.fl-page-btn.active {
+    border-color: #a2ff00;
+    background: #a2ff00;
+    color: #000;
+    font-weight: 700;
+    cursor: default;
+}
+.fl-page-btn.disabled {
+    opacity: 0.25;
+    cursor: not-allowed;
+}
+
+.fl-ellipsis {
+    color: #444;
+    font-family: 'Inpin Hongmengti', sans-serif;
+    font-size: 1rem;
+    padding: 0 2px;
+    user-select: none;
+}
+
+.ModalCheckCommento{
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    background-color: #161616;
+    border: 3px solid rgb(129, 126, 126);
+    border-radius: 15px 0px 15px 15px;
+
+    padding: 20px;
+    z-index: 3001;
+
+    font-family: 'Inpin Hongmengti', sans-serif;
+
+    display: none;
+
+    flex-direction: column;
+    align-items: flex-end; 
+}
+
+.XModalCheck {
+    position: absolute;
+    top: -4px;
+    right: -4px;
+    width: 18px;
+    aspect-ratio: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    background-color: #949393;
+    border: 1px solid rgb(5, 5, 5);
+    border-radius: 5px;
+
+    padding: 3px;
+    margin: 6px;
+    
+    font-family: 'Inpin Hongmengti', sans-serif;
+
+    cursor: pointer;
+}
+
+.XModalCheck:hover{
+    animation: CDW-button-pressed 1s infinite;
+    color: #000;
+}
+
+.ModalCheckCommento p {
+
+    color: rgb(212, 211, 211);
+    text-align: center;
+    
+
+    border-bottom: 2px solid #3d3c3cc7;
+
+    margin: 7px 0 10px 0;
+    padding-bottom: 10px;
+
+}
+
+.ModalCheckCommento button {
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    height: 35px;
+    min-width: 80px;
+    padding: 0 15px;
+    margin: 2px;
+
+    background-color: #090909;
+    color: white;
+    font-style: italic;
+    font-size: 16px;
+
+    border-radius: 80px;
+    border: 3px solid #454545;
+
+    cursor: pointer;
+    user-select: none;
+    font-family: 'Inpin Hongmengti', sans-serif;
+}
+
+
+.ModalCheckCommento button:active{
+    animation: CDW-button-pressed 1s infinite;
+    color: #000;
+    border: none;
+}
+
+
+.Background{
+    position: fixed;
+    inset: 0;
+    z-index: 3000;
+
+    background-color: #000;
+
+    background-image: radial-gradient(rgba(180,180,180,0.15) 1px, transparent 1px);
+    background-size: 6px 6px;
+
+    opacity: 0.9;
+    cursor: pointer;
+
+    display: none;
+}
+
+@keyframes CDW-button-pressed {
+    0% {
+        transform: scale(100%,100%);
+        background: linear-gradient(45deg, #e3ff00,#a2ff00, #e3ff00);
+    }
+    50%{
+        transform: scale(105%,105%);
+    }
+    75% {
+        background: linear-gradient(45deg, #a2ff00,#e3ff00, #a2ff00);
+    }
+    100% {
+        transform: scale(100%,100%);
+        background: linear-gradient(45deg, #e3ff00,#a2ff00, #e3ff00);
+    }
+}

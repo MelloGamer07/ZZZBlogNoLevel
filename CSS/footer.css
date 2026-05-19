@@ -1,0 +1,92 @@
+@font-face {
+    font-family: 'InpinHongmengti';
+    src: url('../ASSETS/ZZZ.ttf') format('truetype');
+    font-display: swap;
+}
+
+footer{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 138px;
+    margin-top: auto;
+
+    background-image:
+      radial-gradient(circle at center, black 0.08rem, transparent 0),
+      radial-gradient(circle at center, black 0.08rem, transparent 0);
+    background-size: 0.6rem 0.6rem;
+    background-position: 0 0, 0.3rem 0.3rem;
+
+    mask-image: linear-gradient(rgb(0 0 0), rgb(0 0 0));
+}
+
+.footer-container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(0,0,0,0.65);
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.btn{
+    color:white;
+    font-family: 'InpinHongmengti', sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding:7px 7px 0px 7px;
+    border-radius: 5px;
+    text-shadow: 3px 3px 2px black;
+    user-select: none;
+}
+
+.btn:active{
+    filter: invert();
+    text-shadow: 0px 0px 0px black;
+    animation: footer-button-pressed 1s infinite;
+}
+
+.btn:active .btn-text {
+    background-color: transparent;
+}
+
+@keyframes footer-button-pressed {
+    0% {
+        background: linear-gradient(45deg, #1c00ff,#5d00ff, #1c00ff,#5d00ff, #1c00ff);
+    }
+    75% {
+        background: linear-gradient(45deg, #5d00ff,#1c00ff, #5d00ff,#1c00ff, #5d00ff);
+    }
+    100% {
+        background: linear-gradient(45deg, #1c00ff,#5d00ff, #1c00ff,#5d00ff, #1c00ff);
+    }
+}
+
+.btn-img{
+    height: 55px;
+    -webkit-user-drag: none;
+    user-select: none;
+}
+
+.btn-text{
+    font-size: 1rem;
+    width: 100%;
+    height: 50px;
+    margin: 0;
+    margin-top: 15px;
+    background-color: black;
+    display: flex;
+    justify-content: center;
+    padding: 5px;
+    user-select: none;
+}
+
+.left-border, .right-border{
+    flex: 1;
+    height: 60px;
+    background: black;
+    margin-top: auto;
+    margin-bottom: 0;
+}

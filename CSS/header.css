@@ -1,0 +1,315 @@
+/* ================= Font ================= */
+
+@font-face {
+    font-family: 'InpinHongmengti';
+    src: url('../ASSETS/ZZZ.ttf') format('truetype');
+    font-display: swap;
+}
+
+
+/* ================= Header ================= */
+
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 999;
+
+    background-color: rgba(0,0,0,0.65);
+    width: 100%;
+    padding: 0.5rem 1rem;
+    box-sizing: border-box;
+
+    background-image:
+      radial-gradient(circle at center, black 0.08rem, transparent 0),
+      radial-gradient(circle at center, black 0.08rem, transparent 0);
+    background-size: 0.6rem 0.6rem;
+    background-position: 0 0, 0.3rem 0.3rem;
+
+    mask-image: linear-gradient(rgb(0 0 0), rgb(0 0 0));
+    -webkit-user-drag: none;
+
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+
+/* ================= Back Button ================= */
+
+.back-btn{
+    border: 1px solid transparent;
+    aspect-ratio: 3/2;
+    height: 50px;
+    border-radius:15px 27px 27px 30px;
+    margin-left: 25px;
+}
+
+.back-btn:active{
+    animation: button-pressed 1s infinite;
+    margin-left: 25px;
+}
+
+.back-btn-img{
+    width: 100%;
+    height: 100%;
+    display: block;
+    user-select: none;
+}
+
+.back-btn-img:active{
+    width: 100%;
+    height: 100%;
+    display: none;
+}
+
+
+/* ================= Profile Button ================= */
+
+.profile-btn {
+    width: 400px;
+    max-width: 100%;
+    height: 50px;
+    background: linear-gradient(grey,#161616, #161616);
+    border-radius: 30px;
+    margin-left: 25px;
+    color: white;
+    font-family: 'inpin hongmengti', italic;
+    padding: 4px;
+    box-sizing: border-box;
+    
+    display: flex;
+    align-items: center;
+    /*justify-content: center;*/
+}
+
+.profile-btn:active{
+    animation: button-pressed 1s infinite;
+}
+
+.profile-btn-extra {
+    background: linear-gradient(#252525,#212121, #181818);
+    border-radius: 25px;
+    height: 43px;
+    padding: 4px;
+    width: 395px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    box-sizing: border-box;
+    user-select: none;
+    overflow: hidden;
+}
+
+
+/* ================= Profile Info ================= */
+
+.pfp {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    object-fit: cover;
+    flex-shrink: 0;
+    filter: drop-shadow(0px 0px 4px #000000);
+    -webkit-user-drag: none;
+}
+
+.user-data {
+    flex: 1;
+    min-width: 0;
+    margin-top: -45px;
+}
+
+#username {
+    margin: 0 0 8px 0;
+    text-shadow: 3px 3px 2px black;
+    margin-top: 12.5%;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    font-family: 'InpinHongmengti', sans-serif;
+}
+
+
+/* ================= Level Bar ================= */
+
+.lvlBar-container {
+    background-color: black;
+    width: 72.5%;
+    height: 12px;
+    margin-top: -2%;
+    border-radius: 10px;
+    position: relative;
+    overflow: hidden;
+    border:solid #000000;
+}
+
+.lvlBar-completition {
+    background: linear-gradient(135deg, #2aa8ff, #3ec1ff);
+    height: 100%;
+    width: 0%;
+    margin-top: 0;
+    border-radius: 10px;
+}
+
+.user-level-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    margin-top: -45px;
+    margin-left: auto;
+    margin-right: -250px;
+    font-family: 'InpinHongmengti', sans-serif;
+}
+
+#user-lvl {
+    font-size: 1.5rem;
+    margin: 0;
+    text-shadow: 3px 3px 2px black;
+}
+
+#level-tag {
+    font-size: 0.6rem;
+    margin: 0;
+    text-shadow: 3px 3px 2px black;
+    opacity: 0.8;
+}
+
+/* ================= Title ================= */
+
+.title-page {
+  position: relative;
+  margin-left: 25px;
+  font-family: 'inpin hongmengti', italic;
+  user-select: none;
+}
+
+.title-page {
+  background: linear-gradient(#eee, #333);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.title-page::before {
+  content: attr(data-text);
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+
+  color: #fff; 
+
+  text-shadow:
+    0 -2px 0 #000,
+    -2px -2px 0 #000,
+    2px -2px 0 #000,
+
+    -2px 0 0 #000,
+    2px 0 0 #000,
+
+    0 2px 0 #000,
+    -2px 2px 0 #000,
+    2px 2px 0 #000;
+}
+
+
+/* ================= Animations ================= */
+
+@keyframes button-pressed {
+    0% {
+        transform: scale(100%,100%);
+        background: linear-gradient(45deg, #e3ff00,#a2ff00, #e3ff00);
+    }
+    50%{
+        transform: scale(110%,110%);
+    }
+    75% {
+        background: linear-gradient(45deg, #a2ff00,#e3ff00, #a2ff00);
+    }
+    100% {
+        transform: scale(100%,100%);
+        background: linear-gradient(45deg, #e3ff00,#a2ff00, #e3ff00);
+    }
+}
+
+@keyframes FL-button-pressed {
+    0% {
+        transform: scale(100%,100%);
+        background: linear-gradient(45deg, #1c00ff,#5d00ff, #1c00ff,#5d00ff, #1c00ff);
+    }
+    50%{
+        transform: scale(110%,110%);
+    }
+    75% {
+        background: linear-gradient(45deg, #5d00ff,#1c00ff, #5d00ff,#1c00ff, #5d00ff);
+    }
+    100% {
+        transform: scale(100%,100%);
+        background: linear-gradient(45deg, #1c00ff,#5d00ff, #1c00ff,#5d00ff, #1c00ff);
+    }
+}
+
+.enterBtn{
+    position: absolute;
+    left: auto;
+    right: 265px;
+
+    height: 50px;
+    width: 175px;
+    background-color: #090909;
+    color: white;
+    font-style: italic;
+    font-size: 16px;
+    border-radius: 80px;
+
+    display: flex;
+    align-items: center;      
+    justify-content: center;  
+
+    padding: 0 15px;
+
+    outline: 2px solid #090909;
+    border: 4px solid #454545;
+    cursor: pointer;
+    font-family: 'InpinHongmengti', sans-serif;
+
+    user-select: none;
+}
+
+.enterBtn:active{
+    animation: button-pressed 1s infinite;
+    color: #000;
+}
+
+.enterPrivacyPolicy{
+    position: absolute;
+    left: auto;
+    right: 25px;
+
+    height: 50px;
+    width: 175px;
+    background-color: #090909;
+    color: white;
+    font-style: italic;
+    font-size: 16px;
+    border-radius: 80px;
+
+    display: flex;
+    align-items: center;      
+    justify-content: center;  
+
+    padding: 0 15px;
+
+    outline: 2px solid #090909;
+    border: 4px solid #454545;
+    cursor: pointer;
+    font-family: 'InpinHongmengti', sans-serif;
+
+    user-select: none;
+}
+
+.enterPrivacyPolicy:active{
+    animation: button-pressed 1s infinite;
+    color: #000;
+}
